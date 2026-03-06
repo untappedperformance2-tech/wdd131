@@ -1,0 +1,147 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header p {
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    color: #ecf0f1;
+}
+
+/* Navigation - Flexbox */
+nav {
+    background-color: #34495e;
+    margin: -1rem -2rem 0 -2rem;
+    padding: 0.5rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}
+
+/* Main content grid */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* Main content area */
+.main-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.main-content h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Aside styles */
+aside {
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #e67e22;
+}
+
+aside h3 {
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    color: #555;
+}
+
+aside li {
+    margin-bottom: 0.3rem;
+}
+
+/* Image placeholders */
+.image-placeholder {
+    background-color: #bdc3c7;
+    height: 120px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #2c3e50;
+    font-weight: bold;
+    border: 2px dashed #7f8c8d;
+}
+
+.image-placeholder.small {
+    height: 80px;
+    font-size: 0.9rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    border-top: 4px solid #e67e22;
+}
+
+/* Responsive design - basic */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
