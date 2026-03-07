@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Aaron Morris</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Aaron Morris – HTML, CSS, JavaScript, web development student portfolio">
+    <meta name="author" content="Aaron Morris">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/aaron-morris/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Aaron Morris</h1>
+        
+        <div class="cards-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <p>My name is Aaron Morris and I'm from Utah, USA. I'm currently learning web development at BYU. I enjoy coding, spending time with family, and learning new things. This is my first time really using CSS grid and flexbox together and it's pretty cool once you figure it out. I'm excited to learn more about JavaScript and making websites interactive.</p>
+                    <img src="images/profile.jpg" alt="Profile picture placeholder" class="card-img">
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                    <p>Here are some websites I use a lot for help with my coding homework. Stack Overflow always saves me when I get stuck on something. MDN Web Docs is kinda hard to read sometimes but it has all the answers. W3Schools is good for beginners too.</p>
+                    <img src="images/resources.jpg" alt="Resources placeholder" class="card-img">
+                    <ul>
+                        <li><a href="#">MDN Web Docs</a></li>
+                        <li><a href="#">W3Schools</a></li>
+                        <li><a href="#">Stack Overflow</a></li>
+                        <li><a href="#">CSS Tricks</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | [Your State]</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
