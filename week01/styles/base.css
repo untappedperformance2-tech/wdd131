@@ -124,25 +124,37 @@ main h1 {
     color: #444;
 }
 
-/* image placeholders */
+/* FIXED: image styles - no more stretching! */
 .card-img {
     width: 100%;
-    height: 150px;
-    background-color: #ccc;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 6px;
     margin: 1rem 0;
+    border: 1px solid #ddd;
+}
+
+/* placeholder style when no image exists yet */
+.card-img[src=""] {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ccc;
     color: #555;
     font-style: italic;
+    min-height: 150px;
     border: 2px dashed #999;
 }
 
-/* if we put actual images later they'll look ok */
+.card-img[src=""]::after {
+    content: "Image placeholder";
+}
+
+/* regular img tag styling */
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 /* list styling */

@@ -30,7 +30,9 @@
                 <h2>About Me</h2>
                 <div class="card-content">
                     <p>My name is Aaron Morris and I'm from Utah, USA. I'm currently learning web development at BYU. I enjoy coding, spending time with family, and learning new things. This is my first time really using CSS grid and flexbox together and it's pretty cool once you figure it out. I'm excited to learn more about JavaScript and making websites interactive.</p>
-                    <img src="images/me.jpg" alt="Profile picture placeholder" class="card-img">
+                    <div class="image-wrapper">
+                        <img src="images/me.jpg" alt="Aaron Morris profile picture" class="card-img">
+                    </div>
                 </div>
             </section>
 
@@ -38,12 +40,14 @@
                 <h2>Web Dev Resources</h2>
                 <div class="card-content">
                     <p>Here are some websites I use a lot for help with my coding homework. Stack Overflow always saves me when I get stuck on something. MDN Web Docs is kinda hard to read sometimes but it has all the answers. W3Schools is good for beginners too.</p>
-                    <img src="images/resources.jpg" alt="Resources placeholder" class="card-img">
+                    <div class="image-wrapper">
+                        <img src="images/resources.jpg" alt="Web development resources" class="card-img">
+                    </div>
                     <ul>
-                        <li><a href="#">MDN Web Docs</a></li>
-                        <li><a href="#">W3Schools</a></li>
-                        <li><a href="#">Stack Overflow</a></li>
-                        <li><a href="#">CSS Tricks</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
                     </ul>
                 </div>
             </section>
@@ -51,7 +55,7 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Utah</p>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Utah, USA</p>
         <p id="lastModified"></p>
     </footer>
 </body>
