@@ -1,40 +1,43 @@
-// temples.js – hamburger menu & footer dates
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('temples.js loaded');
+// temples.js — Temple Album JavaScript
+// Handles: hamburger nav toggle, footer year, footer last-modified date
 
-    // --- hamburger menu ---
-    const hamburger = document.getElementById('hamburger-btn');
-    const navMenu = document.getElementById('nav-menu');
+/* ── Footer: dynamic copyright year ── */
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('open');
-            // change icon between ☰ and ✕
-            if (navMenu.classList.contains('open')) {
-                hamburger.innerHTML = '✕';
-            } else {
-                hamburger.innerHTML = '☰';
-            }
-        });
-    }
+/* ── Footer: last modified date ── */
+const lastModifiedSpan = document.getElementById('last-modified');
+if (lastModifiedSpan) {
+  lastModifiedSpan.textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
 
-    // --- footer dates ---
-    const yearSpan = document.getElementById('currentyear');
-    if (yearSpan) {
-        const currentYear = new Date().getFullYear();
-        yearSpan.textContent = currentYear;
-    }
+/* ── Hamburger navigation toggle ── */
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
 
-    const lastMod = document.getElementById('lastModified');
-    if (lastMod) {
-        lastMod.textContent = 'Last Modified: ' + document.lastModified;
-    }
+if (hamburger && nav) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
 
-    // optional: prevent default on nav links for demo (remove if you want real links)
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            alert('Demo link – no page navigation.');
-        });
+    // Update aria-expanded for accessibility
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
+
+    // Toggle icon between ☰ (open) and ✕ (close)
+    hamburger.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+  });
+
+  // Close the menu when a nav link is clicked (good UX on mobile)
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.innerHTML = '&#9776;';
     });
-});
+  });
+}

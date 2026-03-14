@@ -1,73 +1,79 @@
-/* temples-large.css – desktop view */
-@media screen and (min-width: 768px) {
-    /* hide hamburger button on large screens */
-    #hamburger-btn {
-        display: none;
-    }
+/* =========================================================
+   temples-large.css  —  Larger-screen overrides (min-width: 640px+)
+   Loaded after temples.css; overrides mobile-first rules.
+   ========================================================= */
 
-    /* show navigation by default */
-    #nav-menu {
-        display: block !important;
-        margin-top: 0.5rem;
-    }
+/* ---- Medium screens: 2-column nav, 2-column grid ---- */
+@media (min-width: 640px) {
 
-    .header-top {
-        display: block;
-        text-align: center;
-    }
+  /* Header: keep everything in a single row */
+  .header-inner {
+    flex-wrap: nowrap;
+    padding: 0.9rem 2rem;
+  }
 
-    header h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
-    }
+  /* Hide hamburger on larger screens */
+  #hamburger {
+    display: none;
+  }
 
-    /* flexbox navigation – required */
-    nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        list-style: none;
-    }
+  /* Nav: always visible, horizontal row */
+  #main-nav {
+    display: flex !important;        /* override JS .open toggling */
+    flex-direction: row;
+    width: auto;
+    border-top: none;
+    padding: 0;
+    gap: 0.25rem;
+  }
 
-    nav li {
-        margin-bottom: 0;
-        border-bottom: none;
-    }
+  #main-nav a {
+    padding: 0.45rem 0.85rem;
+  }
 
-    nav a {
-        padding: 0.5rem 1rem;
-    }
+  /* h1 sizing up */
+  main h1 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
 
-    nav a:hover {
-        padding-left: 1rem; /* override mobile hover */
-    }
-
-    /* grid – 3 columns */
-    .temple-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    main h1 {
-        font-size: 2.5rem;
-        text-align: center;
-        border-left: none;
-        border-bottom: 5px solid #f39c12;
-        padding-bottom: 0.5rem;
-        margin-bottom: 2rem;
-    }
-
-    figure:hover {
-        transform: translateY(-8px);
-    }
+  /* 2-column gallery */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
 }
 
-/* even larger – optional */
-@media screen and (min-width: 1200px) {
-    .temple-grid {
-        gap: 2.5rem;
-    }
-    img {
-        height: 220px;
-    }
+/* ---- Large screens: 3-column grid ---- */
+@media (min-width: 900px) {
+
+  .header-inner {
+    padding: 1rem 3rem;
+  }
+
+  .site-title {
+    font-size: 1.85rem;
+  }
+
+  main {
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  main h1 {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  /* 3-column gallery using auto-fit + minmax */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* ---- Extra-large screens ---- */
+@media (min-width: 1200px) {
+  main {
+    padding: 3rem 2.5rem 5rem;
+  }
 }
