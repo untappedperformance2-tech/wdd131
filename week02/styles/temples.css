@@ -1,0 +1,163 @@
+/* temples.css - mobile first! */
+
+/* Simple reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background-color: #2b4b6f;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Hamburger button */
+#hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    display: block;
+}
+
+#hamburger-btn:hover {
+    color: #f0c45a;
+}
+
+/* Navigation menu - hidden by default on mobile */
+#nav-menu {
+    display: none;
+    margin-top: 1rem;
+}
+
+#nav-menu.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for nav */
+nav a:hover {
+    background-color: #f0c45a;
+    color: #2b4b6f;
+    border-radius: 5px;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1;
+}
+
+main h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b4b6f;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-left: 5px solid #f0c45a;
+    padding-left: 1rem;
+}
+
+/* Temple grid - mobile: 1 column */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #2b4b6f;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f7ff;
+}
+
+/* Footer */
+footer {
+    background-color: #2b4b6f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 4px solid #f0c45a;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+#lastModified {
+    color: #f0c45a;
+    font-size: 0.9rem;
+}

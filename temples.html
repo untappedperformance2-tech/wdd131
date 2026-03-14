@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | Aaron Morris</title>
+    <meta name="description" content="A collection of temple pictures showing different LDS temples from around the world.">
+    <meta name="author" content="Aaron Morris">
+    
+    <!-- Google Fonts - i think i did this right -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS files - mobile first so small css first then large -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    
+    <!-- JavaScript - deferred so it loads after html -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>Temple Album</h1>
+            <button id="hamburger-btn">☰</button>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Beautiful Temples</h2>
+        <div class="temple-grid">
+            <figure>
+                <img src="images/temple1.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple2.jpg" alt="Provo City Center Temple" loading="lazy">
+                <figcaption>Provo City Center Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple3.jpg" alt="Rome Italy Temple" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple4.jpg" alt="Tokyo Japan Temple" loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple5.jpg" alt="Paris France Temple" loading="lazy">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple6.jpg" alt="San Diego California Temple" loading="lazy">
+                <figcaption>San Diego Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple7.jpg" alt="Washington D.C. Temple" loading="lazy">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple8.jpg" alt="London England Temple" loading="lazy">
+                <figcaption>London England Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple9.jpg" alt="Sao Paulo Brazil Temple" loading="lazy">
+                <figcaption>Sao Paulo Brazil Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
