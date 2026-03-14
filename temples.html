@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album | Aaron Morris</title>
-    <meta name="description" content="A collection of temple pictures showing different LDS temples from around the world.">
+    <meta name="description" content="A collection of temple pictures showing different LDS temples from around the world for my WDD131 class project.">
     <meta name="author" content="Aaron Morris">
     
-    <!-- Google Fonts - i think i did this right -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     
-    <!-- JavaScript - deferred so it loads after html -->
+    <!-- JavaScript with defer -->
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-top">
             <h1>Temple Album</h1>
-            <button id="hamburger-btn">☰</button>
+            <button id="hamburger-btn" aria-label="Toggle Menu">☰</button>
         </div>
         <nav id="nav-menu">
             <ul>
@@ -37,7 +37,8 @@
     </header>
 
     <main>
-        <h2>Beautiful Temples</h2>
+        <h1>Beautiful Temples Around the World</h1>
+        
         <div class="temple-grid">
             <figure>
                 <img src="images/temple1.jpg" alt="Salt Lake Temple" loading="lazy">

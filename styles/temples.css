@@ -1,6 +1,6 @@
-/* temples.css - mobile first! */
+/* temples.css - mobile first!
+   i tried to make this look good on phones first */
 
-/* Simple reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
     color: #2c3e50;
-    background-color: #f8f9fa;
+    background-color: #f5f5f5;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #2b4b6f;
+    background-color: #1e4a6b;
     color: white;
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -35,25 +35,24 @@ header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
-/* Hamburger button */
+/* Hamburger button - only shows on mobile */
 #hamburger-btn {
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 2.2rem;
     cursor: pointer;
     padding: 0 0.5rem;
     display: block;
 }
 
 #hamburger-btn:hover {
-    color: #f0c45a;
+    color: #f39c12;
 }
 
-/* Navigation menu - hidden by default on mobile */
+/* Navigation - hidden by default on mobile */
 #nav-menu {
     display: none;
     margin-top: 1rem;
@@ -79,14 +78,15 @@ nav a {
     padding: 0.75rem 1rem;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect for nav */
+/* Hover effect for nav - required */
 nav a:hover {
-    background-color: #f0c45a;
-    color: #2b4b6f;
+    background-color: #f39c12;
+    color: #1e4a6b;
     border-radius: 5px;
+    padding-left: 1.5rem;
 }
 
 /* Main content */
@@ -97,16 +97,16 @@ main {
     flex: 1;
 }
 
-main h2 {
+main h1 {
     font-family: 'Montserrat', sans-serif;
-    color: #2b4b6f;
+    color: #1e4a6b;
     margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    border-left: 5px solid #f0c45a;
+    font-size: 2rem;
+    border-left: 5px solid #f39c12;
     padding-left: 1rem;
 }
 
-/* Temple grid - mobile: 1 column */
+/* CSS Grid for temple images - mobile: 1 column */
 .temple-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -117,14 +117,14 @@ figure {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid #ddd;
     transition: transform 0.3s;
 }
 
 figure:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 img {
@@ -138,18 +138,18 @@ figcaption {
     padding: 1rem;
     text-align: center;
     font-weight: 600;
-    color: #2b4b6f;
+    color: #1e4a6b;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f0f7ff;
+    background-color: #e8f0fe;
 }
 
 /* Footer */
 footer {
-    background-color: #2b4b6f;
+    background-color: #1e4a6b;
     color: white;
     text-align: center;
     padding: 1.5rem;
-    border-top: 4px solid #f0c45a;
+    border-top: 4px solid #f39c12;
     margin-top: auto;
 }
 
@@ -158,6 +158,17 @@ footer p {
 }
 
 #lastModified {
-    color: #f0c45a;
+    color: #f39c12;
     font-size: 0.9rem;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    #hamburger-btn {
+        font-size: 1.8rem;
+    }
 }
