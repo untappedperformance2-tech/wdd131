@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Banner - replaced marquee */
+.banner {
+    background-color: #ffd966;
+    color: #1e3c5c;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #1e3c5c;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    
+    /* CSS Grid for two columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Make the h2 span both columns */
+main h2 {
+    grid-column: 1 / -1;  /* Span from first to last column line */
+    text-align: left;      /* Left-align the heading */
+    margin-bottom: 0.5rem;
+    color: #1e3c5c;
+    border-bottom: 3px solid #ffd966;
+    padding-bottom: 0.5rem;
+}
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h3 {
+    color: #1e3c5c;
+    margin-top: 0;
+    border-left: 5px solid #ffd966;
+    padding-left: 0.75rem;
+}
+
+article p {
+    line-height: 1.6;
+    color: #333;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Callout - FIXED CONTRAST ISSUES */
+.callout {
+    grid-column: 1 / -1;  /* Span both columns */
+    background-color: #1e3c5c;  /* Darker blue for better contrast */
+    color: white;
+    padding: 1.5rem 2rem;  /* Fixed padding issue */
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.callout h3 {
+    color: #ffd966;  /* Light yellow for contrast */
+    margin-top: 0;
+    border-left: 5px solid #ffd966;
+    padding-left: 0.75rem;
+}
+
+.callout p {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem;
+    text-align: left;  /* Moved footer content to the left */
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;  /* Stack on mobile */
+    }
+}
