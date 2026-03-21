@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Responsive Images - Aaron Morris</title>
+    <link rel="stylesheet" href="styles/responsive-images.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Responsive Images with Picture Element</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- Large image for screens 1000px and wider -->
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <!-- Medium image for screens 500px to 999px -->
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <!-- Small image for screens below 500px (fallback) -->
+                <img src="images/hero-small.webp" 
+                     alt="Beautiful temple with stunning architecture and peaceful surroundings"
+                     width="1500" 
+                     height="750">
+            </picture>
+        </div>
+
+        <div class="content">
+            <h2>Art Direction Example</h2>
+            <p>This page demonstrates responsive images using the picture element. Different images load at different screen sizes, providing optimized loading and art direction. The images maintain a 2:1 aspect ratio (width:height) across all screen sizes.</p>
+            <p>Resize your browser window to see the image change at 1000px and 500px breakpoints.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Responsive Images Demo | Aaron Morris</p>
+    </footer>
 </body>
 </html>
