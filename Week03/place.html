@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - New Zealand - Aaron Morris</title>
+    <meta name="description" content="Discover the beauty of New Zealand - Land of the Long White Cloud. Learn about its culture, geography, and weather.">
+    <meta name="author" content="Aaron Morris">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>New Zealand</h1>
+        <p class="subtitle">Aotearoa - Land of the Long White Cloud</p>
+    </header>
+
+    <main>
+        <!-- Hero section with responsive images using srcset -->
+        <div class="hero">
+            <img src="images/new-zealand-small.webp"
+                 srcset="images/new-zealand-small.webp 500w,
+                         images/new-zealand-medium.webp 1000w,
+                         images/new-zealand-large.webp 1500w"
+                 sizes="(max-width: 500px) 500px,
+                        (max-width: 1000px) 1000px,
+                        1500px"
+                 alt="Beautiful landscape of New Zealand with mountains and green hills"
+                 width="1500"
+                 height="750">
+        </div>
+
+        <div class="content-wrapper">
+            <section class="info-card">
+                <h2>About New Zealand</h2>
+                <p>New Zealand is an island country in the southwestern Pacific Ocean. It consists of two main landmasses—the North Island and the South Island —and over 700 smaller islands. It is known for its stunning landscapes, from mountains and fjords to beaches and rolling green hills.</p>
+                <p>The country is home to about 5.1 million people and is famous for its Maori culture, friendly people, and outdoor adventures. New Zealand was also the filming location for the Lord of the Rings trilogy.</p>
+            </section>
+
+            <section class="info-card">
+                <h2>Quick Facts</h2>
+                <ul>
+                    <li><strong>Capital:</strong> Wellington</li>
+                    <li><strong>Largest City:</strong> Auckland</li>
+                    <li><strong>Population:</strong> ~5.1 million</li>
+                    <li><strong>Official Languages:</strong> English, Māori, NZ Sign Language</li>
+                    <li><strong>Currency:</strong> New Zealand Dollar (NZD)</li>
+                    <li><strong>Famous For:</strong> Kiwi bird, Lord of the Rings, All Blacks rugby</li>
+                </ul>
+            </section>
+
+            <section class="weather-card">
+                <h2>Weather</h2>
+                <div class="weather-info">
+                    <div class="weather-stats">
+                        <p><strong>Temperature:</strong> <span id="temp">14</span>°C</p>
+                        <p><strong>Wind Speed:</strong> <span id="wind">12</span> km/h</p>
+                        <p><strong>Wind Chill:</strong> <span id="windchill">--</span>°C</p>
+                    </div>
+                    <div class="weather-icon">
+                        ⛅
+                    </div>
+                </div>
+                <p class="weather-note">New Zealand has a mild, temperate climate with moderate rainfall. Summer (Dec-Feb) averages 20-30°C, while winter (Jun-Aug) averages 10-15°C in the north and 0-10°C in the south.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | New Zealand Page</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

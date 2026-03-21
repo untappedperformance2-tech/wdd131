@@ -1,0 +1,228 @@
+/* CSS Variables - Color scheme inspired by New Zealand's flag and nature */
+:root {
+    --primary-dark: #00247D;      /* Dark blue from NZ flag */
+    --primary-red: #C1272D;       /* Red from NZ flag */
+    --primary-white: #FFFFFF;
+    --accent-green: #2E7D32;      /* Green representing the landscape */
+    --accent-gray: #F5F5F5;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--accent-gray);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #0044AA 100%);
+    color: var(--text-light);
+    text-align: center;
+    padding: var(--spacing-lg);
+    border-bottom: 4px solid var(--primary-red);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Hero Image - Responsive */
+.hero {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+/* Card Styles */
+.info-card {
+    background-color: var(--primary-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+.info-card h2 {
+    color: var(--primary-dark);
+    border-left: 5px solid var(--primary-red);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    margin-bottom: var(--spacing-md);
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-card li strong {
+    color: var(--primary-dark);
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Weather Card */
+.weather-card {
+    background-color: var(--primary-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+}
+
+.weather-card h2 {
+    color: var(--primary-dark);
+    border-left: 5px solid var(--primary-red);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+/* Pseudo-element for weather icon in large view */
+.weather-card h2::after {
+    content: " ⛅";
+    font-size: 1.3rem;
+    margin-left: var(--spacing-sm);
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-gray);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.weather-stats p {
+    margin: var(--spacing-sm) 0;
+}
+
+.weather-stats strong {
+    color: var(--primary-dark);
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin-left: var(--spacing-md);
+}
+
+.weather-note {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+footer p {
+    margin: var(--spacing-sm) 0;
+}
+
+#lastModified {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    header {
+        padding: var(--spacing-md);
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: var(--spacing-md);
+    }
+    
+    .info-card, .weather-card {
+        padding: var(--spacing-md);
+    }
+    
+    .weather-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .weather-icon {
+        margin-left: 0;
+        margin-top: var(--spacing-sm);
+        font-size: 3rem;
+    }
+    
+    /* Remove pseudo-element in mobile view */
+    .weather-card h2::after {
+        content: "";
+    }
+}
