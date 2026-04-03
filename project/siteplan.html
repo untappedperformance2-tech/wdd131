@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Mountain Bike Trails of Utah | Aaron Morris</title>
+    <meta name="description" content="Website planning document for Mountain Bike Trails of Utah - a hub for mountain biking enthusiasts">
+    <meta name="author" content="Aaron Morris">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+        <h1>Mountain Bike Trails of Utah</h1>
+        <p class="subtitle">Website Planning Document</p>
+    </header>
+
+    <main>
+        <!-- Site Name Section -->
+        <section class="card">
+            <h2>Site Name</h2>
+            <div class="card-content">
+                <p><strong>Mountain Bike Trails of Utah</strong></p>
+                <p>I chose this name because it's straightforward and clearly tells visitors what the site is about. "Mountain Bike Trails of Utah" immediately communicates that the site focuses on mountain biking trails specifically in Utah. It's easy to remember and includes relevant keywords that people might search for. The name also has a professional feel while being welcoming to both beginner and experienced riders.</p>
+                <p><em>Optional domain availability: utahmtbtrails.org</em></p>
+            </div>
+        </section>
+
+        <!-- Site Purpose Section -->
+        <section class="card">
+            <h2>Site Purpose</h2>
+            <div class="card-content">
+                <p>The site serves as a comprehensive resource for mountain bikers looking to explore trails across Utah. It provides:</p>
+                <ul>
+                    <li>Detailed trail listings with difficulty ratings, length, elevation gain, and location information</li>
+                    <li>A submission form where users can recommend new trails to add to the database</li>
+                    <li>A personal trail log where users can track which trails they've ridden using localStorage</li>
+                    <li>Filtering and sorting options to help users find trails that match their skill level</li>
+                </ul>
+                <p>The goal is to help riders discover new trails, share their experiences, and build their personal trail resume.</p>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section class="card">
+            <h2>Scenarios</h2>
+            <div class="card-content">
+                <p><strong>Scenario 1:</strong> "I'm visiting Utah for the first time and want to find beginner-friendly mountain bike trails near Salt Lake City. What trails would be good for someone who's new to mountain biking?"</p>
+                <p><strong>Scenario 2:</strong> "I just rode an amazing trail that isn't listed on this site. How can I share it with other riders so they can enjoy it too?"</p>
+                <p><strong>Scenario 3:</strong> "I want to keep track of all the trails I've completed this summer. Is there a way to save my progress and see which trails I still need to ride?"</p>
+            </div>
+        </section>
+
+        <!-- Color Schema Section -->
+        <section class="card">
+            <h2>Color Schema</h2>
+            <div class="card-content">
+                <div class="color-demo">
+                    <div class="color-box" style="background-color: #2C5E2E;">
+                        <span>#2C5E2E</span>
+                    </div>
+                    <div class="color-box" style="background-color: #8B5A2B;">
+                        <span>#8B5A2B</span>
+                    </div>
+                    <div class="color-box" style="background-color: #F5E6D3;">
+                        <span>#F5E6D3</span>
+                    </div>
+                    <div class="color-box" style="background-color: #E67E22;">
+                        <span>#E67E22</span>
+                    </div>
+                </div>
+                <ul class="color-list">
+                    <li><strong>Deep Forest Green (#2C5E2E)</strong> - Used for headers, navigation bar, and footer background. Represents the natural forest trails.</li>
+                    <li><strong>Earth Brown (#8B5A2B)</strong> - Used for borders, card accents, and secondary elements. Represents the dirt trails.</li>
+                    <li><strong>Sand Tan (#F5E6D3)</strong> - Used for page background and card backgrounds. Creates a natural, warm feel.</li>
+                    <li><strong>Burnt Orange (#E67E22)</strong> - Used for buttons, hover effects, and call-to-action elements. Adds energy and visual interest.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="card">
+            <h2>Typography</h2>
+            <div class="card-content">
+                <p><strong>Montserrat (Google Fonts)</strong> - Used for headings (h1, h2, h3) and navigation links. Bold, clean, and modern - perfect for creating visual hierarchy.</p>
+                <p><strong>Open Sans (Google Fonts)</strong> - Used for body text, paragraphs, and card descriptions. Highly readable and professional.</p>
+                <p><strong>Example:</strong></p>
+                <div class="font-demo">
+                    <h3 style="font-family: 'Montserrat', sans-serif;">This is a heading (Montserrat)</h3>
+                    <p style="font-family: 'Open Sans', sans-serif;">This is body text that will be used for descriptions, trail details, and longer content. Open Sans is easy to read on screens of all sizes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wireframes Section -->
+        <section class="card">
+            <h2>Wireframes</h2>
+            <div class="card-content">
+                <div class="wireframe-container">
+                    <div class="wireframe">
+                        <h3>Mobile View (Home Page)</h3>
+                        <div class="wireframe-box mobile">
+                            <div class="wf-header">Header / Logo</div>
+                            <div class="wf-nav">Nav: Home | Trails | Submit | Log</div>
+                            <div class="wf-hero">Hero Image / Welcome</div>
+                            <div class="wf-card">Featured Trail Card 1</div>
+                            <div class="wf-card">Featured Trail Card 2</div>
+                            <div class="wf-card">Featured Trail Card 3</div>
+                            <div class="wf-footer">Footer</div>
+                        </div>
+                        <p class="wf-caption">Mobile layout stacks content vertically with full-width cards</p>
+                    </div>
+
+                    <div class="wireframe">
+                        <h3>Desktop View (Home Page)</h3>
+                        <div class="wireframe-box desktop">
+                            <div class="wf-header">Header / Logo</div>
+                            <div class="wf-nav">Nav: Home | Trails | Submit | Log</div>
+                            <div class="wf-hero">Hero Image / Welcome</div>
+                            <div class="wf-grid">
+                                <div class="wf-card">Trail 1</div>
+                                <div class="wf-card">Trail 2</div>
+                                <div class="wf-card">Trail 3</div>
+                                <div class="wf-card">Trail 4</div>
+                            </div>
+                            <div class="wf-footer">Footer</div>
+                        </div>
+                        <p class="wf-caption">Desktop layout uses CSS Grid with 2-4 columns for trail cards</p>
+                    </div>
+                </div>
+
+                <div class="wireframe-container">
+                    <div class="wireframe">
+                        <h3>Trails Page Layout</h3>
+                        <div class="wireframe-box desktop">
+                            <div class="wf-header">Header / Logo</div>
+                            <div class="wf-nav">Nav: Home | Trails | Submit | Log</div>
+                            <div class="wf-filters">Filter: All | Beginner | Intermediate | Advanced</div>
+                            <div class="wf-grid">
+                                <div class="wf-card">Trail Card<br>⭐ Difficulty</div>
+                                <div class="wf-card">Trail Card<br>⭐ Difficulty</div>
+                                <div class="wf-card">Trail Card<br>⭐ Difficulty</div>
+                                <div class="wf-card">Trail Card<br>⭐ Difficulty</div>
+                            </div>
+                            <div class="wf-footer">Footer</div>
+                        </div>
+                        <p class="wf-caption">Trails page includes filter buttons to sort by difficulty</p>
+                    </div>
+
+                    <div class="wireframe">
+                        <h3>Submit Trail Form</h3>
+                        <div class="wireframe-box desktop">
+                            <div class="wf-header">Header / Logo</div>
+                            <div class="wf-nav">Nav: Home | Trails | Submit | Log</div>
+                            <div class="wf-form">
+                                <div>Trail Name: [_______]</div>
+                                <div>Location: [_______]</div>
+                                <div>Difficulty: [Select]</div>
+                                <div>Length (miles): [_______]</div>
+                                <div>Elevation Gain: [_______]</div>
+                                <div>Description: [_______]</div>
+                                <div class="wf-button">Submit Trail</div>
+                            </div>
+                            <div class="wf-footer">Footer</div>
+                        </div>
+                        <p class="wf-caption">Form includes validation and saves submissions to localStorage</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Mountain Bike Trails of Utah - Site Plan</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").innerHTML = "Last modified: " + document.lastModified;
+    </script>
+</body>
+</html>
