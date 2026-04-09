@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted | Aaron Morris</title>
+    <meta name="description" content="Product review confirmation page">
+    <meta name="author" content="Aaron Morris">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted!</h1>
+        <p class="subtitle">Thank you for your feedback</p>
+    </header>
+
+    <main>
+        <div class="confirmation-card">
+            <div class="checkmark">✓</div>
+            <h2>Your review has been received</h2>
+            <p>Thank you for taking the time to share your experience with us.</p>
+            <p>Your feedback helps us improve our products and serve you better.</p>
+            <div class="review-count">
+                <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
+            </div>
+            <a href="form.html" class="back-btn">Write Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Product Review Form</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
