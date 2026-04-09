@@ -6,6 +6,12 @@
     <title>Site Plan - Mountain Bike Trails of Utah | Aaron Morris</title>
     <meta name="description" content="Website planning document for Mountain Bike Trails of Utah - a hub for mountain biking enthusiasts">
     <meta name="author" content="Aaron Morris">
+    
+    <!-- Google Fonts - proper link method -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
@@ -50,21 +56,21 @@
             </div>
         </section>
 
-        <!-- Color Schema Section -->
+        <!-- Color Schema Section - NO INLINE STYLES -->
         <section class="card">
             <h2>Color Schema</h2>
             <div class="card-content">
                 <div class="color-demo">
-                    <div class="color-box" style="background-color: #2C5E2E;">
+                    <div class="color-box color-box-green">
                         <span>#2C5E2E</span>
                     </div>
-                    <div class="color-box" style="background-color: #8B5A2B;">
+                    <div class="color-box color-box-brown">
                         <span>#8B5A2B</span>
                     </div>
-                    <div class="color-box" style="background-color: #F5E6D3;">
+                    <div class="color-box color-box-tan">
                         <span>#F5E6D3</span>
                     </div>
-                    <div class="color-box" style="background-color: #E67E22;">
+                    <div class="color-box color-box-orange">
                         <span>#E67E22</span>
                     </div>
                 </div>
@@ -77,7 +83,7 @@
             </div>
         </section>
 
-        <!-- Typography Section -->
+        <!-- Typography Section - NO INLINE STYLES -->
         <section class="card">
             <h2>Typography</h2>
             <div class="card-content">
@@ -85,8 +91,8 @@
                 <p><strong>Open Sans (Google Fonts)</strong> - Used for body text, paragraphs, and card descriptions. Highly readable and professional.</p>
                 <p><strong>Example:</strong></p>
                 <div class="font-demo">
-                    <h3 style="font-family: 'Montserrat', sans-serif;">This is a heading (Montserrat)</h3>
-                    <p style="font-family: 'Open Sans', sans-serif;">This is body text that will be used for descriptions, trail details, and longer content. Open Sans is easy to read on screens of all sizes.</p>
+                    <h3 class="font-heading-demo">This is a heading (Montserrat)</h3>
+                    <p class="font-body-demo">This is body text that will be used for descriptions, trail details, and longer content. Open Sans is easy to read on screens of all sizes.</p>
                 </div>
             </div>
         </section>
@@ -152,12 +158,12 @@
                             <div class="wf-header">Header / Logo</div>
                             <div class="wf-nav">Nav: Home | Trails | Submit | Log</div>
                             <div class="wf-form">
-                                <div>Trail Name: [_______]</div>
-                                <div>Location: [_______]</div>
-                                <div>Difficulty: [Select]</div>
-                                <div>Length (miles): [_______]</div>
-                                <div>Elevation Gain: [_______]</div>
-                                <div>Description: [_______]</div>
+                                <div class="wf-form-row">Trail Name: [_______________]</div>
+                                <div class="wf-form-row">Location: [_______________]</div>
+                                <div class="wf-form-row">Difficulty: [Select]</div>
+                                <div class="wf-form-row">Length (miles): [_______________]</div>
+                                <div class="wf-form-row">Elevation Gain: [_______________]</div>
+                                <div class="wf-form-row">Description: [_______________]</div>
                                 <div class="wf-button">Submit Trail</div>
                             </div>
                             <div class="wf-footer">Footer</div>

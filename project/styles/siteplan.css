@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --forest-green: #2C5E2E;
+    --earth-brown: #8B5A2B;
+    --sand-tan: #F5E6D3;
+    --burnt-orange: #E67E22;
+    --text-dark: #333;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--sand-tan);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--forest-green);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 5px solid var(--burnt-orange);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-left: 5px solid var(--burnt-orange);
+}
+
+.card h2 {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--forest-green);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+}
+
+.card-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* ========== COLOR BOX CLASSES (No inline styles) ========== */
+.color-demo {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.color-box {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.color-box-green {
+    background-color: #2C5E2E;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+.color-box-brown {
+    background-color: #8B5A2B;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+.color-box-tan {
+    background-color: #F5E6D3;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.color-box-orange {
+    background-color: #E67E22;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+.color-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.color-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.color-list li::before {
+    content: "•";
+    color: var(--burnt-orange);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* ========== FONT DEMO CLASSES (No inline styles) ========== */
+.font-demo {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.font-heading-demo {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+    color: var(--forest-green);
+}
+
+.font-body-demo {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ========== WIREFRAME STYLES ========== */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.wireframe {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.wireframe h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.wireframe-box {
+    background-color: #e8e8e8;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px dashed #aaa;
+}
+
+.wireframe-box.mobile {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.wireframe-box.desktop {
+    width: 100%;
+}
+
+.wf-header {
+    background-color: var(--forest-green);
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-nav {
+    background-color: var(--earth-brown);
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-hero {
+    background-color: #c0c0c0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-footer {
+    background-color: var(--forest-green);
+    color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-card {
+    background-color: #c0c0c0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.wf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.wf-filters {
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-form {
+    background-color: transparent;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.wf-form-row {
+    background-color: #c0c0c0;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    text-align: left;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-button {
+    background-color: var(--burnt-orange);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.wf-caption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* ========== FOOTER STYLES ========== */
+footer {
+    background-color: var(--forest-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+#lastModified {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    .wireframe-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .color-demo {
+        justify-content: center;
+    }
+}
