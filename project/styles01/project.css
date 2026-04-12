@@ -18,84 +18,16 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(135deg, var(--sand-tan) 0%, #e8d9c4 100%);
+    background-color: var(--sand-tan);
     color: var(--text-dark);
     line-height: 1.6;
-    position: relative;
-}
-
-/* ============================================================
-   MOVING BACKGROUND - PARALLAX MOUNTAINS
-   ============================================================ */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background-image: 
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800"><path fill="%232C5E2E" fill-opacity="0.15" d="M0,320L48,304C96,288,192,256,288,256C384,256,480,288,576,304C672,320,768,320,864,304C960,288,1056,256,1152,256C1248,256,1344,288,1392,304L1440,320L1440,800L1392,800C1344,800,1248,800,1152,800C1056,800,960,800,864,800C768,800,672,800,576,800C480,800,384,800,288,800C192,800,96,800,48,800L0,800Z"></path></svg>'),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800"><path fill="%238B5A2B" fill-opacity="0.1" d="M0,512L48,496C96,480,192,448,288,448C384,448,480,480,576,496C672,512,768,512,864,496C960,480,1056,448,1152,448C1248,448,1344,480,1392,496L1440,512L1440,800L1392,800C1344,800,1248,800,1152,800C1056,800,960,800,864,800C768,800,672,800,576,800C480,800,384,800,288,800C192,800,96,800,48,800L0,800Z"></path></svg>');
-    background-repeat: repeat-x;
-    background-position: bottom;
-    background-size: 1440px 400px, 1440px 300px;
-    animation: slideMountains 60s linear infinite;
-}
-
-@keyframes slideMountains {
-    0% {
-        background-position: 0% bottom, 0% bottom;
-    }
-    100% {
-        background-position: 100% bottom, 50% bottom;
-    }
-}
-
-/* Floating clouds animation */
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><path fill="white" fill-opacity="0.3" d="M20,50 Q30,35 45,45 Q55,30 70,40 Q85,25 100,35 Q110,20 125,30 Q135,25 145,35 Q155,45 165,40 L165,60 Q155,65 145,60 Q135,70 125,65 Q110,75 100,65 Q85,75 70,65 Q55,75 45,65 Q30,70 20,60 Z"></path></svg>');
-    background-repeat: repeat;
-    background-position: 0% 20%;
-    background-size: 200px 100px;
-    animation: floatClouds 80s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes floatClouds {
-    0% {
-        background-position: 0% 20%;
-    }
-    100% {
-        background-position: 100% 20%;
-    }
-}
-
-/* Parallax effect on scroll - mountains move at different speeds */
-body {
-    background-attachment: fixed;
-}
-
-/* Make content stand out from background */
-header, main, footer {
-    position: relative;
-    z-index: 1;
 }
 
 header {
-    background: linear-gradient(135deg, rgba(44,94,46,0.95), rgba(26,58,26,0.95));
+    background: linear-gradient(135deg, var(--forest-green), #1a3a1a);
     color: var(--white);
     padding: 1rem 2rem;
     border-bottom: 4px solid var(--burnt-orange);
-    backdrop-filter: blur(2px);
 }
 
 .logo h1 {
@@ -129,9 +61,6 @@ main {
     max-width: 1400px;
     margin: 2rem auto;
     padding: 0 1.5rem;
-    background: rgba(245, 230, 211, 0.85);
-    border-radius: var(--border-radius);
-    backdrop-filter: blur(1px);
 }
 
 h1, h2, h3 {
@@ -185,12 +114,11 @@ h1 {
     text-decoration: none;
     font-weight: 600;
     margin-top: 1rem;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: var(--burnt-orange);
-    transform: scale(1.05);
+    background-color: #1a3a1a;
 }
 
 .btn-orange {
@@ -209,16 +137,15 @@ h1 {
 }
 
 .trail-card {
-    background-color: rgba(255,255,255,0.95);
+    background-color: var(--white);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s;
+    transition: transform 0.3s;
 }
 
 .trail-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
 }
 
 .trail-card img {
@@ -226,11 +153,6 @@ h1 {
     height: 200px;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s;
-}
-
-.trail-card:hover img {
-    transform: scale(1.05);
 }
 
 .trail-card .info {
@@ -263,15 +185,10 @@ h1 {
 }
 
 .stat-card {
-    background-color: rgba(255,255,255,0.9);
+    background-color: var(--white);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
 }
 
 .stat-card h3 {
@@ -282,7 +199,7 @@ h1 {
 
 .cta {
     text-align: center;
-    background-color: rgba(44,94,46,0.95);
+    background-color: var(--forest-green);
     color: var(--white);
     padding: 3rem;
     border-radius: var(--border-radius);
@@ -303,7 +220,7 @@ h1 {
 }
 
 .filter-btn {
-    background-color: rgba(255,255,255,0.9);
+    background-color: var(--white);
     border: 2px solid var(--forest-green);
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
@@ -315,11 +232,10 @@ h1 {
 .filter-btn:hover, .filter-btn.active {
     background-color: var(--forest-green);
     color: var(--white);
-    transform: scale(1.05);
 }
 
 form {
-    background-color: rgba(255,255,255,0.95);
+    background-color: var(--white);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -344,12 +260,6 @@ form {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-family: 'Open Sans', sans-serif;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--burnt-orange);
 }
 
 .required {
@@ -365,21 +275,11 @@ form {
     cursor: pointer;
     font-weight: 600;
     width: 100%;
-    transition: all 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #c95a0f;
-    transform: scale(1.02);
 }
 
 .reset-btn {
     background-color: var(--earth-brown);
     margin-top: 1rem;
-}
-
-.reset-btn:hover {
-    background-color: #6d441f;
 }
 
 .form-message {
@@ -395,7 +295,7 @@ form {
 }
 
 .log-stats {
-    background-color: rgba(255,255,255,0.9);
+    background-color: var(--white);
     padding: 1rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -408,7 +308,7 @@ form {
 }
 
 .trail-card.completed {
-    opacity: 0.85;
+    opacity: 0.8;
     border: 2px solid var(--forest-green);
 }
 
@@ -421,7 +321,6 @@ form {
     cursor: pointer;
     margin-top: 0.5rem;
     width: 100%;
-    transition: all 0.3s;
 }
 
 .toggle-ridden:hover {
@@ -429,7 +328,7 @@ form {
 }
 
 footer {
-    background-color: rgba(44,94,46,0.95);
+    background-color: var(--forest-green);
     color: var(--white);
     text-align: center;
     padding: 1.5rem;
@@ -445,7 +344,20 @@ footer a:hover {
     color: var(--burnt-orange);
 }
 
-/* Responsive Design */
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--forest-green);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    background-color: var(--burnt-orange);
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -467,9 +379,5 @@ footer a:hover {
     
     h1 {
         font-size: 1.5rem;
-    }
-    
-    main {
-        background: rgba(245, 230, 211, 0.92);
     }
 }
