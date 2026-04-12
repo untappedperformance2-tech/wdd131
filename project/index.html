@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Bike Trails of Utah | Home</title>
+    <meta name="description" content="Discover the best mountain biking trails in Utah. Filter by difficulty, track your rides, and share your experiences.">
+    <meta name="author" content="Aaron Morris">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🚵 Mountain Bike Trails of Utah</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="trails.html">Trails</a></li>
+                <li><a href="submit.html">Submit Trail</a></li>
+                <li><a href="log.html">My Trail Log</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Mountain biker on Utah trail" loading="lazy" width="1500" height="500">
+            </picture>
+            <div class="hero-text">
+                <h2>Explore Utah's Best Trails</h2>
+                <p>From desert slickrock to alpine singletrack</p>
+                <a href="trails.html" class="btn">Find Your Trail</a>
+            </div>
+        </div>
+
+        <section class="featured">
+            <h2>Featured Trails of the Month</h2>
+            <div class="featured-grid" id="featured-container"></div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>🏔️ 50+</h3>
+                <p>Amazing Trails</p>
+            </div>
+            <div class="stat-card">
+                <h3>⭐ 4.8</h3>
+                <p>Average Rating</p>
+            </div>
+            <div class="stat-card">
+                <h3>📊 500+</h3>
+                <p>Trails Logged</p>
+            </div>
+            <div class="stat-card">
+                <h3>🚵 1000+</h3>
+                <p>Happy Riders</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Ride?</h2>
+            <p>Join our community of mountain bikers and discover new trails today!</p>
+            <a href="submit.html" class="btn btn-orange">Submit a Trail</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Mountain Bike Trails of Utah</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

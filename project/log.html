@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Bike Trails of Utah | My Trail Log</title>
+    <meta name="description" content="Track which trails you've ridden and save your progress.">
+    <meta name="author" content="Aaron Morris">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🚵 Mountain Bike Trails of Utah</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trails.html">Trails</a></li>
+                <li><a href="submit.html">Submit Trail</a></li>
+                <li><a href="log.html" class="active">My Trail Log</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>My Trail Log</h1>
+        <p>Track the trails you've ridden. Your progress is saved automatically!</p>
+
+        <div class="log-stats">
+            <p>🚵 Trails Ridden: <span id="riddenCount">0</span> / <span id="totalTrails">0</span></p>
+            <p>📊 Completion: <span id="completionPercent">0</span>%</p>
+            <button id="resetLog" class="reset-btn">Reset All Progress</button>
+        </div>
+
+        <div id="log-container" class="trails-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Aaron Morris | Mountain Bike Trails of Utah</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
